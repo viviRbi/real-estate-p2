@@ -26,7 +26,6 @@ function List(props) {
       return count
     }
   }, {})
-  console.log(cityNum)
 
   const keysArr = Object.keys(cityNum).map((city, id) => {
     return (

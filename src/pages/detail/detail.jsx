@@ -11,14 +11,19 @@ const Detail = (props) => {
   }
 
   // let each = houses.find(e => e.adr === match.params.adr)
-  return (
-    <div >
-      <h1>Detail</h1>
-      <h1>{each.adr}</h1>
-      <img src={each.img[0]} alt={each.img[0]} />
-      <h2 each={each.adr} onClick={(e) => props.saveHandle(e)}>Add to Save</h2>
-      <h2>{each.desc}</h2>
-    </div>
-  )
+  if (each) {
+    return (
+      <div >
+        <h1>Detail</h1>
+        <h1>{each.adr}</h1>
+        <img src={each.img[0]} alt={each.img[0]} />
+        <h2 each={each.adr} onClick={(e) => props.saveHandle(e)}>Add to Save</h2>
+        <h2>{each.desc}</h2>
+      </div>
+    )
+  }
+  else {
+    return <h2>Loading</h2>
+  }
 }
 export default Detail;
