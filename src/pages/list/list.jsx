@@ -30,16 +30,19 @@ function List(props) {
   const keysArr = Object.keys(cityNum).map((city, id) => {
     return (
       <div key={id}>
-        <Link to={`/list/${match.params.type}/${city}`}><h1>{city}: {cityNum[city]} house(s)</h1></Link>
+        <Link to={`/list/${match.params.type}/${city.toLowerCase()}`}><h1>{city}: {cityNum[city]} house(s)</h1></Link>
       </div>
     )
   })
-  return (
-    <div className="list">
-      <h1>House {match.params.type}</h1>
-      {keysArr}
-    </div>
-  )
+  if (keysArr) {
+    return (
+      <div className="list">
+        <h1>House {match.params.type}</h1>
+        {keysArr}
+      </div>
+    )
+  }
+  else { return <h2>Loading ...</h2> }
 }
 export default List;
 

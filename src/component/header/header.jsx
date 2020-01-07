@@ -11,7 +11,7 @@ const Header = (props) => (
         <Link to={`/list/for lease`}><button>Rent</button></Link>
         <Link to={`/list/all`}><button>All</button></Link>
       </section>
-
+      <section>  <Link to={`/`}><h2>Tessan</h2></Link></section>
       <section>
         <Link to="/save"><button>Save{props.saveNum}</button></Link>
         <button>Login</button>

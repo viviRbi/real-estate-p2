@@ -18,7 +18,9 @@ class App extends Component {
     this.state = {
       houses: [],
       type: "",
-      save: []
+      save: [],
+      search: "",
+      submitSearch: ""
     }
   }
   componentDidMount() {
@@ -56,6 +58,14 @@ class App extends Component {
     saveHouses.splice(index, 1);
     this.setState(() => ({ save: saveHouses }))
   }
+  searchHandle = (e) => {
+    const search = e.target.value.toLowerCase()
+    this.setState(() => ({ search: search }))
+  }
+  submitSearchHandle = () => {
+    const search = this.state.search;
+    this.setState(() => ({ submitSearch: search }))
+  }
   render() {
     return (
       <div style={{ position: "relative" }}>
@@ -64,7 +74,7 @@ class App extends Component {
 
         <Header navHandle={(e) => this.navHandle(e)} type={this.state.type} saveNum={this.state.save.length} />
         <Switch>
-          <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} />} />
+          <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} searchHandle={(e) => this.searchHandle(e)} submitSearch={this.state.submitSearch} submitSearchHandle={this.submitSearchHandle} />} />
           <Route exact path="/save" render={(props) => <Save {...props} houses={this.state.houses} save={this.state.save} removeSaveHandle={(e) => this.removeSaveHandle(e)} />} />
           <Route exact path="/list/:type" render={(props) => <List {...props} houses={this.state.houses} type={this.state.type} />} />
           <Route exact path="/list/:type/:city" render={(props) => <CityList {...props} houses={this.state.houses} type={this.state.type} />} />
