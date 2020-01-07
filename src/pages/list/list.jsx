@@ -1,6 +1,6 @@
 import React from "react";
 import "./list.css";
-
+import { Link } from "react-router-dom";
 
 function List(props) {
   const { houses, match } = props;
@@ -13,17 +13,34 @@ function List(props) {
       houseList.push(houses[i])
     }
   }
+
+  const cities = [];
+  houseList.forEach(e => cities.push(e.city));
+
+  const cityNum = cities.reduce((count, city) => {
+    if (count[city]) {
+      count[city]++;
+      return count;
+    } else {
+      count[city] = 1;
+      return count
+    }
+  }, {})
+  console.log(cityNum)
+
+  const keysArr = Object.keys(cityNum).map((city, id) => {
+    return (
+      <div key={id}>
+        <Link to={`/list/${match.params.type}/${city}`}><h1>{city}: {cityNum[city]} house(s)</h1></Link>
+      </div>
+    )
+  })
   return (
-    <div>
-      <h1>List {match.params.type}</h1>
-      {houseList.map(data => (
-        <div key={data.adr}>
-          <div style={{ backgroundImage: `url${data.img[0]}` }} />
-          <h1>{data.adr}</h1>
-          <h2>{data.status}</h2>
-        </div>
-      ))}
+    <div className="list">
+      <h1>House {match.params.type}</h1>
+      {keysArr}
     </div>
   )
 }
 export default List;
+
