@@ -7,14 +7,14 @@ const Header = (props) => (
     <ul onClick={props.navHandle}>
       <section>
 
-        <Link className="link" to={`/list/for sale`}><a>Buy</a></Link>|
-        <Link className="link" to={`/list/for lease`}><a>Rent</a></Link>|
-        <Link className="link" to={`/list/all`}><a>All</a></Link>
+        <Link className="link" to={`/list/for sale`}><span>Buy</span></Link>|
+        <Link className="link" to={`/list/for lease`}><span>Rent</span></Link>|
+        <Link className="link" to={`/list/all`}><span>All</span></Link>
       </section>
-      <section>  <Link className="link" to={`/`}><a>Tessan</a></Link></section>
+      <section>  <Link className="link" to={`/`}><span>Tessan&nbsp; &nbsp; &nbsp; </span></Link> </section>
       <section>
-        <Link className="link" to="/save" ><a>Save <span>{props.saveNum}</span></a></Link>
-        |<a className="link">Login</a>
+        <Link className="link" to="/save" ><span>Save <small>{props.saveNum}</small></span></Link>
+        |<span className="link">Login</span>
       </section>
     </ul>
 

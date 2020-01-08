@@ -1,13 +1,165 @@
+.home{
+  overflow-x: hidden;
+}
 .home .landing-image{
   width: 100vw;
   height: 100vh;
   background-image: url("https://cdn.allwallpaper.in/wallpapers/1920x1330/16535/beautifully-lit-pool-at-night-1920x1330-wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  display: table;
   text-align: center;
+  margin:0;
+  padding:0;
+}
+.home .landing-image .landing-overlay{
+  width:100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+  margin:0;
+  padding:0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .home .landing-holder{
-margin-top: 10%;
-display: inline-block;
+display: table-cell;
+vertical-align: middle;
+padding-bottom: 7vh;
+}
+.home .landing-holder h1{
+font-size: 7vmin;
+color: white;
+margin-bottom: 1vmin;
+font-weight: 300;
+}
+.home .landing-holder h3{
+  font-weight: 300;
+  color: rgb(204, 220, 255)
+}
+.home .landing-holder input{
+  width: 45vw;
+  height: 7vmin;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 5vmin;
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  -ms-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.home .landing-holder input:focus{
+  outline: none;
+  width: 55vw;
+}
+::placeholder{
+  color: lightgrey;
+  font-size: 4vmin;
+}
+.home .landing-holder .go{
+  padding: 1vmin 2vmin;
+  background: rgb(233, 197, 79);
+  margin: 5vmin auto;
+  display: inline-block;
+  border-radius: 10px;
+  width: 14vmin;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 3.5vmin;
+  box-shadow: 1px 1px 1px darkgoldenrod;
+}
+
+.home .landing-holder .go:hover{
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+/* ------------------------------ main --------------------------------- */
+.home main{
+  width: 100%;
+  margin: 23vh auto 5vh auto;
+}
+.home main .topic{
+  margin: 5vh 5vw;
+  text-align: center;
+}
+.home .topic h3{
+  font-size: 5vmin;
+}
+.home .topic h4{
+  font-size: 4.5vmin;
+  font-weight: 200;
+}
+.home hr{
+  width: 15vw;
+  height: 2px;
+  background: orange;
+  border: none;
+}
+.home main .buy-sell{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 11vh 3vw 0 3vw;
+}
+.home main .buy-sell article{
+  margin: 0 3vw;
+  text-align: center;
+  padding: 4vh 3vw;
+  border-radius: 10%;
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.home main .buy-sell article button{
+  height: 7vh;
+  width: 25vh;
+  margin: 5vh 0;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  background: none;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.home main .buy-sell article button:hover{
+  background: royalblue;
+}
+.home main .buy-sell article button:hover .link{
+  color: white;
+}
+.home main .buy-sell article h3{
+  font-size: 4vmin;
+  color:royalblue;
+}
+.home main .buy-sell article p{
+  font-size: 2vmin;
+  color: rgb(88, 121, 212);
+  font-weight: 200;
+}
+.home main .buy-sell article button .link{
+  text-decoration: none;
+  font-size: 3vmin;
+  color: royalblue;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.home main .buy-sell article:hover{
+  -moz-transform: translateY(-2vmin);
+  -o-transform: translateY(-2vmin);
+  -ms-transform: translateY(-2vmin);
+  -webkit-transform: translateY(-2vmin);
+  transform: translateY(-2vmin)
 }

@@ -5,7 +5,6 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/home";
 import Header from "./component/header/header";
-import Footer from "./component/footer/footer";
 import List from "./pages/list/list";
 import CityList from "./pages/cityList/cityList";
 import Detail from "./pages/detail/detail";
@@ -62,6 +61,10 @@ class App extends Component {
     const search = e.target.value.toLowerCase()
     this.setState(() => ({ search: search }))
   }
+  submitHandle = (e) => {
+    const search = "";
+    this.setState({ search })
+  }
 
   render() {
     return (
@@ -70,16 +73,16 @@ class App extends Component {
         {this.state.type === "login" ? <Login /> : null}
 
         <Header navHandle={(e) => this.navHandle(e)} type={this.state.type} saveNum={this.state.save.length} />
-        <main>
+        <main className="main">
           <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} searchHandle={(e) => this.searchHandle(e)} search={this.state.search} />} />
+            <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} searchHandle={(e) => this.searchHandle(e)} search={this.state.search} submitHandle={this.submitHandle} />} />
             <Route exact path="/save" render={(props) => <Save {...props} houses={this.state.houses} save={this.state.save} removeSaveHandle={(e) => this.removeSaveHandle(e)} />} />
             <Route exact path="/list/:type" render={(props) => <List {...props} houses={this.state.houses} type={this.state.type} />} />
             <Route exact path="/list/:type/:city" render={(props) => <CityList {...props} houses={this.state.houses} type={this.state.type} />} />
             <Route exact path="/detail/:adr" render={(props) => <Detail {...props} houses={this.state.houses} saveHandle={(e) => this.saveHandle(e)} />} />
           </Switch>
         </main>
-        <Footer />
+
       </div>
     );
   }

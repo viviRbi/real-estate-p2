@@ -1,0 +1,55 @@
+footer{
+  margin:0;
+  padding:0;
+}
+footer *{
+  margin:0;
+  padding:0;
+}
+footer .footer-image{
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+footer .footer-image .img{
+  width: 100vw;
+  opacity: 0.03;
+  margin:0;
+}
+footer .footer-image .img img{
+  width: 120vw;
+}
+footer .footer-holder{
+  position: absolute;
+  padding: 5vh 14vw;
+  bottom:5vh;
+  left:0;
+  right:0;
+  top: 40%;
+}
+footer .footer-holder p{
+  font-weight: 100;
+  font-size: 3vmin;
+  text-align: center;
+  color: grey;
+}
+footer .social-media{
+  margin: 5vmin auto 7vmin auto;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ color: grey;
+}
+footer .social-media li{
+  margin: 0 4vmin;
+  list-style: none;
+}
+footer .footer-holder .copyright{
+  font-size: 2vmin;
+  color: grey;
+}
+
+/* linear-gradient(to bottom, #f863fd, royalblue);
+-webkit-linear-gradient(top, #f863fd, royalblue);
+-moz-linear-gradient(top, #f863fd, royalblue) */
