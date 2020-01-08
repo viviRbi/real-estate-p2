@@ -1,0 +1,13 @@
+.home .landing-image{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://cdn.allwallpaper.in/wallpapers/1920x1330/16535/beautifully-lit-pool-at-night-1920x1330-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.home .landing-holder{
+margin-top: 10%;
+display: inline-block;
+}

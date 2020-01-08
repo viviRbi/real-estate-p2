@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Route, Switch } from "react-router-dom";
 
+import "./App.css";
 import Home from "./pages/home/home";
 import Header from "./component/header/header";
 import Footer from "./component/footer/footer";
@@ -20,7 +21,6 @@ class App extends Component {
       type: "",
       save: [],
       search: "",
-      submitSearch: ""
     }
   }
   componentDidMount() {
@@ -62,24 +62,23 @@ class App extends Component {
     const search = e.target.value.toLowerCase()
     this.setState(() => ({ search: search }))
   }
-  submitSearchHandle = () => {
-    const search = this.state.search;
-    this.setState(() => ({ submitSearch: search }))
-  }
+
   render() {
     return (
-      <div style={{ position: "relative" }}>
+      <div className="all">
         {/* Login is a pop up, do not required Route */}
         {this.state.type === "login" ? <Login /> : null}
 
         <Header navHandle={(e) => this.navHandle(e)} type={this.state.type} saveNum={this.state.save.length} />
-        <Switch>
-          <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} searchHandle={(e) => this.searchHandle(e)} submitSearch={this.state.submitSearch} submitSearchHandle={() => this.submitSearchHandle()} />} />
-          <Route exact path="/save" render={(props) => <Save {...props} houses={this.state.houses} save={this.state.save} removeSaveHandle={(e) => this.removeSaveHandle(e)} />} />
-          <Route exact path="/list/:type" render={(props) => <List {...props} houses={this.state.houses} type={this.state.type} />} />
-          <Route exact path="/list/:type/:city" render={(props) => <CityList {...props} houses={this.state.houses} type={this.state.type} />} />
-          <Route exact path="/detail/:adr" render={(props) => <Detail {...props} houses={this.state.houses} saveHandle={(e) => this.saveHandle(e)} />} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/" render={(props) => <Home {...props} houses={this.state.houses} searchHandle={(e) => this.searchHandle(e)} search={this.state.search} />} />
+            <Route exact path="/save" render={(props) => <Save {...props} houses={this.state.houses} save={this.state.save} removeSaveHandle={(e) => this.removeSaveHandle(e)} />} />
+            <Route exact path="/list/:type" render={(props) => <List {...props} houses={this.state.houses} type={this.state.type} />} />
+            <Route exact path="/list/:type/:city" render={(props) => <CityList {...props} houses={this.state.houses} type={this.state.type} />} />
+            <Route exact path="/detail/:adr" render={(props) => <Detail {...props} houses={this.state.houses} saveHandle={(e) => this.saveHandle(e)} />} />
+          </Switch>
+        </main>
         <Footer />
       </div>
     );
