@@ -27,7 +27,7 @@ background: white;
   padding: 1vmin;
   margin: 0 1vmin;
   text-align: center;
-  color: darkgrey;
+  color: rgb(99, 133, 185);
   font-size: 3vmin;
   cursor: pointer;
   -webkit-transition: all 300ms linear; 
@@ -46,11 +46,13 @@ header .link span{
   color: white;
 }
 .header .link:hover{
-  color:rgb(80, 84, 94);
+  color:rgb(77, 91, 124)
 }
 .header section:nth-child(2) a{
   font-size: 5vmin;
-  text-shadow: 1px 1px 1px lightgrey;
+  text-shadow: 1px 1px 2px rgba(148, 155, 196, 0.3);
+  font-weight: bold;
+  color: rgb(120, 179, 228);
 }
 .header section:nth-child(2) a:hover{
   color:var(--logo);
