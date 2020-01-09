@@ -1,11 +1,76 @@
 .list{
 
 }
+.list header{
+  width: 100vw;
+  height: 42vh;
+  background: none;
+  z-index: 3;
+  overflow: hidden;
+  position: relative;
+}
+.list header .img{
+width: 100vw;
+height: 42vh;
+background-attachment: fixed;
+background-size: cover;
+background-position-y: -27vh;
+background-repeat: no-repeat;
+}
+.list header .block{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: black;
+  opacity: 0.6;
+}
+.list header h1{
+  position: absolute;
+  left: 6%;
+  right:6%;
+  top: 75%;
+  bottom: 0;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+  opacity: 0.4;
+}
+.list h2{
+  margin-left: 10vw;
+}
+.list main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10vh 5vw;
+  justify-content: center;
+  align-items: center;
+}
 .list .each{
-
+  margin: 2vh 3vw;
+  padding: 1vmin auto;
+  text-align: center;
+  border-radius: 10px;
+  width: 34vw;
+  border: 1px solid lightgrey;
+  font-weight: 100;
+}
+.list .each .link{
+  color: royalblue;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size: 1.2vmin;
+  font-weight: 100;
+}
+.list .each .link:hover{
+  color: rgb(150, 162, 199);
 }
 .list .thumbnail{
   width: 40vw;
   height: 30vh;
-
+}
+.list main{
+ 
 }

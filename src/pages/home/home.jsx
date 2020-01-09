@@ -39,18 +39,18 @@ const Home = (props) => {
           <article>
             <h3>Buy a home</h3>
             <p>Find your right house with our current list. There will be houses you won't find anywhere else</p>
-            <button><Link className="link" to={`/list/for sale`}>Search home</Link></button>
+            <Link className="link" to={`/list/for sale`}><button>Search home</button></Link>
 
           </article>
           <article>
             <h3>Rent a home</h3>
             <p>We have everything, from a small room, to a big house and to a fancy apartment.</p>
-            <button><Link className="link" to={`/list/for lease`}>Find Rental</Link></button>
+            <Link className="link" to={`/list/for lease`}>  <button>Find Rental</button></Link>
           </article>
           <article>
             <h3>Rent or Buy</h3>
             <p>Still haven't decide to buy or rent? Don't worry. Please check our curent list for both.</p>
-            <button><Link className="link" to={`/list/all`}>Buy or Rent</Link></button>
+            <Link className="link" to={`/list/all`}>  <button>Buy or Rent</button></Link>
           </article>
         </section>
       </main>

@@ -26,19 +26,34 @@ function List(props) {
       return count
     }
   }, {})
-
+  let listImg;
+  if (match.params.type === "for sale") {
+    listImg = "https://canadianbudgetbinder.files.wordpress.com/2012/12/house1-with-yardsign.jpg"
+  } else if (match.params.type === "for lease") {
+    listImg = "http://www.mikesalkin.com/articles/images/manage4.jpg"
+  } else {
+    listImg = "https://www.scottsdalerealestatearizona.com/wp-content/uploads/2013/10/6390_Sunnyside_Pool_Area1.jpg"
+  }
+  const listType = match.params.type === "all" ? "for buy/ rent" : `${match.params.type}`
   const keysArr = Object.keys(cityNum).map((city, id) => {
     return (
-      <div key={id}>
-        <Link to={`/list/${match.params.type}/${city.toLowerCase()}`}><h1>{city}: {cityNum[city]} house(s)</h1></Link>
+      <div className="each" key={id}>
+        <Link className="link" to={`/list/${match.params.type}/${city.toLowerCase()}`}><h1>{city}<br /> {cityNum[city]} house(s) {listType}</h1></Link>
       </div>
     )
   })
   if (keysArr) {
     return (
       <div className="list">
-        <h1>House {match.params.type}</h1>
-        {keysArr}
+        <header>
+          <div className="img" style={{ backgroundImage: `url(${listImg})` }} />
+          <div className="block" />
+          <h1>Houses {listType}</h1>
+        </header>
+
+        <main>
+          {keysArr}
+        </main>
       </div>
     )
   }

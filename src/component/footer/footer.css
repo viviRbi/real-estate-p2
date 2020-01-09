@@ -35,7 +35,7 @@ footer .footer-holder p{
   color: grey;
 }
 footer .social-media{
-  margin: 5vmin auto 7vmin auto;
+  margin: 5vmin auto 6vmin auto;
  display: flex;
  flex-direction: row;
  justify-content: center;

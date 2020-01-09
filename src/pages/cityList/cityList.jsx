@@ -13,20 +13,31 @@ const cityList = (props) => {
       houseList.push(houses[i])
     }
   }
+  const listType = match.params.type === "all" ? "for buy/ rent" : `${match.params.type}`
   if (houseList) {
     return (
-      <div>
-        <h1>City list</h1>
-        {houseList.map(data => (
-          <div key={data.adr} className="each">
-            <Link to={`/detail/${data.adr}`}>
-              <img className="thumbnail" src={data.img[0]} alt={data.img[0]} />
-            </Link>
-            <h1>{data.adr}</h1>
-            <h2>{data.city} {data.zipcode}</h2>
-            <h2>{data.status}</h2>
-          </div>
-        ))}
+      <div className="city-list">
+        <header>
+          <h1>Houses in {match.params.city.charAt(0).toUpperCase() + match.params.city.slice(1)} {listType}</h1>
+        </header>
+        <main className="img-list">
+          {houseList.map(data => (
+            <div key={data.adr} className="each">
+              <Link className="link" to={`/detail/${data.adr}`}>
+                <div className="thumbnail" style={{ backgroundImage: `url(${data.img[0]})` }}>
+                  <div className="img-content">
+                    <h2><small></small>{data.status}</h2>
+                  </div>
+                </div>
+              </Link>
+              <div className="data">
+                <h1>$ {data.price.current}</h1>
+                <h1>{data.adr}</h1>
+                <h2>{data.city} {data.zipcode}</h2>
+              </div>
+            </div>
+          ))}
+        </main>
       </div>
     )
   } else { return <h2>Loading</h2> }

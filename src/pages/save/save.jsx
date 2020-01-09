@@ -5,6 +5,7 @@ const Save = (props) => {
   const { save } = props;
   return (
     <div>
+      <h1>Your favorite house(s)</h1>
       {save.map(e => (
         <div key={e.adr}>
           <img src={e.img[0]} alt={e.img[0]} />

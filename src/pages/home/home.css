@@ -130,31 +130,28 @@ font-weight: 300;
   -o-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
   transition: all 200ms ease;
+  outline: none;
+  color: royalblue;
+  font-size: 3vmin;
+  cursor: pointer;
 }
-.home main .buy-sell article button:hover{
+.home main .buy-sell article:hover button{
   background: royalblue;
-}
-.home main .buy-sell article button:hover .link{
   color: white;
 }
+
 .home main .buy-sell article h3{
   font-size: 4vmin;
   color:royalblue;
 }
 .home main .buy-sell article p{
-  font-size: 2vmin;
-  color: rgb(88, 121, 212);
+  font-size: 2.5vmin;
+  color: rgb(113, 122, 146);
   font-weight: 200;
 }
-.home main .buy-sell article button .link{
+.home main .buy-sell article .link{
   text-decoration: none;
-  font-size: 3vmin;
   color: royalblue;
-  -webkit-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  transition: all 200ms ease;
 }
 .home main .buy-sell article:hover{
   -moz-transform: translateY(-2vmin);

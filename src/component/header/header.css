@@ -40,7 +40,7 @@ header .link small{
   -moz-transform: translateY(8px) translateX(-3px);
   -webkit-transform: translateY(8px) translateX(-3px);
   transform: translateY(8px) translateX(-3px);
-  padding: 1px 3px;
+  padding: 1px 5px;
   border-radius: 50%;
   font-size: 2vmin;
   background:lightgrey;
