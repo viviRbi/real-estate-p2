@@ -26,12 +26,12 @@ const cityList = (props) => {
               <Link className="link" to={`/detail/${data.adr}`}>
                 <div className="thumbnail" style={{ backgroundImage: `url(${data.img[0]})` }}>
                   <div className="img-content">
-                    <h2><small></small>{data.status}</h2>
+                    <h2><span>$ {data.price.current}</span><small></small>{data.status}</h2>
                   </div>
                 </div>
               </Link>
               <div className="data">
-                <h1>$ {data.price.current}</h1>
+
                 <h1>{data.adr}</h1>
                 <h2>{data.city} {data.zipcode}</h2>
               </div>

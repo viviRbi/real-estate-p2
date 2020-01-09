@@ -6,15 +6,15 @@
   margin: 6vh auto;
 }
 .city-list .img-list{
-  margin: 10vh 5vw;
+  margin: 10vh 4vw;
+  text-align: center;
 }
 .city-list .each{
   display: inline-block;
-  background: grey;
   padding: 0;
 }
 .city-list .each .thumbnail{
-  width: 50vmin;
+  width: 40vmin;
   height: 30vmin;
   background: grey;
   background-size: cover;
@@ -49,16 +49,24 @@
  color: white;
  font-weight: 300;
  margin-right: 5vmin;
+ font-size: 2.5vmin;
 }
 .city-list .each .link h2 small{
   height: 2vmin;
   width: 2vmin;
-  background-color: rgb(14, 156, 14);
+  background-color: rgb(61, 211, 61);
   border-radius: 50%;
   display: inline-block;
   bottom: 10%;
   right: 25%;
   margin: 0 2vmin;
+}
+.city-list .each .link span{
+  position: absolute;
+  left:0;
+  bottom: 10%;
+  font-size: 2.6vmin;
+  font-weight: 400;
 }
 .city-list .each h1{
   text-align: left;
@@ -73,4 +81,10 @@
 .city-list .each .data *{
   margin:0;
   padding: 0;
+}
+.city-list .data h1{
+  font-size: 2.7vmin;
+}
+.city-list .data h2{
+  font-size: 2.7vmin;
 }
