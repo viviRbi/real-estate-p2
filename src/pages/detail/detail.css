@@ -1,6 +1,6 @@
 .detail main{
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 10vmin;
   padding-bottom:0;
 }
 /* -----------------------image------------------ */

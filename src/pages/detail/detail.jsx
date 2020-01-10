@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./detail.css";
-import Footer from "../../component/footer/footer";
 
 class Detail extends Component {
   constructor(props) {
@@ -102,8 +101,6 @@ class Detail extends Component {
               <p>{this.state.submit}</p>
             </form>
           </main>
-          <hr />
-          <Footer />
         </div>
       )
     }
