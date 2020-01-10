@@ -44,8 +44,9 @@ background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10vh 5vw;
-  justify-content: space-around;
+  margin: 10vh auto;
+  width: 75vw;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width:500px){
@@ -82,7 +83,4 @@ background-repeat: no-repeat;
 .list .thumbnail{
   width: 40vw;
   height: 30vh;
-}
-.list main{
- 
 }
