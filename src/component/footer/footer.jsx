@@ -2,9 +2,9 @@ import React from "react";
 import "./footer.css";
 
 const Footer = () => (
-  <footer>
+  <footer className="footer">
     <div className="footer-image">
-      <div className="img"><img src="https://cdn.pixabay.com/photo/2017/10/16/23/02/brooklyn-2858985_960_720.png" alt="footer img" /></div>
+      <hr />
       <div className="footer-holder">
         <p>Tessa group is commited to ensure the best experience to everyone. We are continue to working
           to improve our services, and we welcome any feedback, requests. If you wish to report an issue, please constact us at (832) 200-4899.

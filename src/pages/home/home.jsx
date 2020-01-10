@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
-import Footer from "../../component/footer/footer";
 
 const Home = (props) => {
 
@@ -54,7 +53,6 @@ const Home = (props) => {
           </article>
         </section>
       </main>
-      <Footer />
 
     </div>
 

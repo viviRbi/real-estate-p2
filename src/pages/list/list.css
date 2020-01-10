@@ -52,13 +52,13 @@ background-repeat: no-repeat;
 @media screen and (max-width:500px){
   .list main{
     flex-direction: column;
-}
-.list .each{
-  padding: 0 10vw;
-}
-.list header h1{
-  font-weight: 500;
-}
+    }
+  .list .each{
+    padding: 0 10vw;
+  }
+  .list header h1{
+    font-weight: 500;
+  }
 }
 .list .each{
   margin: 2vmin 2vw;

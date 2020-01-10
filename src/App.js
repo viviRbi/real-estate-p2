@@ -8,8 +8,8 @@ import Header from "./component/header/header";
 import List from "./pages/list/list";
 import CityList from "./pages/cityList/cityList";
 import Detail from "./pages/detail/detail";
-import Login from "./constructor/login/login";
 import Save from "./pages/save/save";
+import Footer from "./component/footer/footer";
 
 
 class App extends Component {
@@ -70,7 +70,7 @@ class App extends Component {
     return (
       <div className="all">
         {/* Login is a pop up, do not required Route */}
-        {this.state.type === "login" ? <Login /> : null}
+        {/* {this.state.type === "login" ? <Login /> : null} */}
 
         <Header navHandle={(e) => this.navHandle(e)} type={this.state.type} saveNum={this.state.save.length} />
         <main className="main">
@@ -82,6 +82,7 @@ class App extends Component {
             <Route exact path="/detail/:adr" render={(props) => <Detail {...props} houses={this.state.houses} saveHandle={(e) => this.saveHandle(e)} />} />
           </Switch>
         </main>
+        <Footer />
       </div >
     );
   }

@@ -104,16 +104,16 @@ font-weight: 300;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 11vh 3vw 0 3vw;
+  margin: 11vh 3vw 20vmin 3vw;
 }
 @media screen and (max-width: 800px){
   .home main .buy-sell{
     flex-direction: column;
-    margin: 10vh 6vw;
+    margin: 10vh 25vw;
     justify-content: center;
   }
   .home main .buy-sell article{
-    margin: 3vh 2vw !important;
+    margin: 7vh 2vw !important;
     padding: 2vh 0;
   }
 }
