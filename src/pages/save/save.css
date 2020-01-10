@@ -1,0 +1,104 @@
+.save-all{
+  text-align: center;
+}
+.save-all header{
+  margin-top: 15vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.save-all header h1{
+  font-size: 3vmin;
+  font-weight: 100;
+  color: grey;
+}
+.save .each{
+  width: 35vmin;
+  display: inline-block;
+  margin: 5vmin;
+  text-align: center;
+}
+.save .save-each{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.save .link{
+  display: inline-block;
+}
+.save .adr:hover{
+  color:royalblue;
+}
+.save .save-img{
+  width: 35vmin;
+  height: 25vmin;
+  text-align: right;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  transition: all 300ms ease;
+  display: inline-block;
+}
+.save .save-each .overlay{
+position: absolute;
+bottom:0;
+left:0;
+right: 0;
+height: 20%;
+background: rgba(0,0,0,0.3);
+}
+.save .save-each .overlay h1{
+  color: white;
+  font-weight: 200;
+  padding: 0 2vmin;
+  font-size: 2vmin;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.save .save-each .overlay h1 .dot{
+  height: 1.5vmin;
+  width: 1.5vmin;
+  background: rgb(97, 218, 97);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 2vmin;
+}
+.save .save-each h1{
+  font-size: 2vmin;
+}
+.save .save-each h2{
+  font-size: 2vmin;
+  font-weight: 500;
+}
+.save .adr{
+  color: grey;
+  display: block;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  transition: all 200ms ease;
+  text-decoration: none;
+}
+.save .save-remove{
+  color: white;
+  font-size: 2vmin;
+  padding: 1px 2vmin;
+  height: 3.5vmin;
+  background: royalblue;
+  display: inline-block;
+  line-height: 3.5vmin;
+  border-radius: 0 0 0 10px;
+  cursor: pointer;
+}
+.save .save-each span:hover{
+  color: royalblue;
+  background: white;
+}

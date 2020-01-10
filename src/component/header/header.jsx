@@ -11,10 +11,10 @@ const Header = (props) => (
         <Link className="link" to={`/list/for lease`}><span>Rent</span></Link>|
         <Link className="link" to={`/list/all`}><span>All</span></Link>
       </section>
-      <section>  <Link className="link" to={`/`}><span>Tessan&nbsp; &nbsp; &nbsp; </span></Link> </section>
+      <section>  <Link className="link" to={`/`}><span>Tessa&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></Link> </section>
       <section>
-        <Link className="link" to="/save" ><span>Save <small>{props.saveNum}</small></span></Link>
-        |<span className="link">Login</span>
+        <Link className="link" to="/save" ><span>Save <small>{props.saveNum}</small></span></Link>|
+        {/* <span className="link">Login</span> */}
       </section>
     </ul>
 

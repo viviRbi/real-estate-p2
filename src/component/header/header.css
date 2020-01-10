@@ -59,6 +59,8 @@ header .link small{
   color: var(--logo);
   text-align:center;
   font-weight: 400;
+  align-self: auto;
+  margin-right: 8vmin;
 }
 .header section:nth-child(2) a:hover{
   color:var(--logo);

@@ -7,6 +7,10 @@ class Detail extends Component {
     super(props);
     this.state = {
       mainPicId: 0,
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
       submit: false
     }
   }
@@ -16,9 +20,17 @@ class Detail extends Component {
   }
   contactHandle = (e) => {
     e.preventDefault();
-    let submitCopy;
-    this.state.submit === true ? submitCopy = false : submitCopy = true
-    this.setState(() => ({ submit: submitCopy }))
+    let submitValue;
+    if (this.state.firstName && this.state.lastName && this.state.email && this.state.phone) {
+      submitValue = "Sent. Thank you for using our service!"
+    } else {
+      submitValue = "Please fill all the information."
+    }
+    this.setState({ submit: submitValue })
+  }
+  handleChange = (e) => {
+    const { value, name } = e.target;
+    this.setState({ [name]: value })
   }
   render() {
     const { match, houses } = this.props;
@@ -77,14 +89,14 @@ class Detail extends Component {
                 </table>
               </section>
             </figure>
-            <div className="form">
-              <input type="text" placeholder="First name" /> <br />
-              <input type="text" placeholder="Last name" /><br />
-              <input type="text" placeholder="Email" /><br />
-              <input type="text" placeholder="Phone" />
-              <button onClick={(e) => this.contactHandle(e)}>Contact</button>
-              <p>{this.state.submit === true ? "Sent. Thank you for using our service!" : ""}</p>
-            </div>
+            <form className="form">
+              <input name="firstName" type="text" placeholder="First name" onChange={this.handleChange} required /> <br />
+              <input name="lastName" type="text" placeholder="Last name" onChange={this.handleChange} required /><br />
+              <input name="email" type="email" placeholder="Email" onChange={this.handleChange} required /><br />
+              <input name="phone" type="number" placeholder="Phone" onChange={this.handleChange} required />
+              <button onClick={this.contactHandle}>Contact</button>
+              <p>{this.state.submit}</p>
+            </form>
           </main>
           <hr />
           <Footer />

@@ -12,6 +12,7 @@
 .city-list .each{
   display: inline-block;
   padding: 0;
+  margin-bottom: 3vh;
 }
 .city-list .each .thumbnail{
   width: 40vmin;
