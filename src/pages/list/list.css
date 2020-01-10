@@ -1,5 +1,5 @@
 .list{
-
+  margin-bottom: 20vmin;
 }
 .list header{
   width: 100vw;
@@ -45,7 +45,7 @@ background-repeat: no-repeat;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10vh 5vw;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 @media screen and (max-width:500px){
@@ -64,7 +64,8 @@ background-repeat: no-repeat;
   padding: 1vmin auto;
   text-align: center;
   border-radius: 10px;
-  width: 40vw;
+  max-width: 40vw;
+  min-width: 30vw;
   border: 1px solid lightgrey;
   font-weight: 100;
 }

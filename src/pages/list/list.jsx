@@ -57,7 +57,7 @@ function List(props) {
       </div>
     )
   }
-  else { return <h2>Loading ...</h2> }
+  else { return <h2 className="loading">Loading ...</h2> }
 }
 export default List;
 

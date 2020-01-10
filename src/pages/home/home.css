@@ -106,6 +106,17 @@ font-weight: 300;
   align-items: center;
   margin: 11vh 3vw 0 3vw;
 }
+@media screen and (max-width: 800px){
+  .home main .buy-sell{
+    flex-direction: column;
+    margin: 10vh 6vw;
+    justify-content: center;
+  }
+  .home main .buy-sell article{
+    margin: 3vh 2vw !important;
+    padding: 2vh 0;
+  }
+}
 .home main .buy-sell article{
   margin: 0 3vw;
   text-align: center;
@@ -123,7 +134,7 @@ font-weight: 300;
   width: 25vh;
   margin: 5vh 0;
   border: 1px solid royalblue;
-  border-radius: 10px;
+  border-radius: 10%;
   background: none;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;

@@ -82,8 +82,7 @@ class App extends Component {
             <Route exact path="/detail/:adr" render={(props) => <Detail {...props} houses={this.state.houses} saveHandle={(e) => this.saveHandle(e)} />} />
           </Switch>
         </main>
-
-      </div>
+      </div >
     );
   }
 }

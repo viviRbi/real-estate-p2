@@ -104,14 +104,11 @@ class Detail extends Component {
           </main>
           <hr />
           <Footer />
-
-
-
         </div>
       )
     }
     else {
-      return <h2>Loading</h2>
+      return <h2 className="loading">Loading</h2>
     }
   }
 }

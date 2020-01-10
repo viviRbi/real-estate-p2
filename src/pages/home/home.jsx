@@ -54,8 +54,8 @@ const Home = (props) => {
           </article>
         </section>
       </main>
-
       <Footer />
+
     </div>
 
   )
