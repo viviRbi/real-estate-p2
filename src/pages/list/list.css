@@ -45,15 +45,26 @@ background-repeat: no-repeat;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10vh 5vw;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width:500px){
+  .list main{
+    flex-direction: column;
+}
 .list .each{
-  margin: 2vh 3vw;
+  padding: 0 10vw;
+}
+.list header h1{
+  font-weight: 500;
+}
+}
+.list .each{
+  margin: 2vmin 2vw;
   padding: 1vmin auto;
   text-align: center;
   border-radius: 10px;
-  width: 34vw;
+  width: 40vw;
   border: 1px solid lightgrey;
   font-weight: 100;
 }

@@ -70,7 +70,7 @@ class Detail extends Component {
                       <td><p><span>Listing Status:</span><small>{each.status}</small></p></td>
                     </tr>
                     <tr>
-                      <td><p><span>State:</span><small>TX</small></p></td>
+                      <td><p><span>Type:</span><small>{each.type}</small></p></td>
                       <td><p><span>Adress:</span><small>{each.adr}</small></p></td>
                     </tr>
                     <tr>
@@ -78,12 +78,16 @@ class Detail extends Component {
                       <td><p><span>City:</span><small>{each.city}</small></p></td>
                     </tr>
                     <tr>
-                      <td><p><span>Sqft:</span><small>{each.sqft} ft</small></p></td>
+                      <td><p><span>Lot Size:</span><small>{each.sqft} sqft</small></p></td>
                       <td><p><span>Zipcode:</span><small>{each.zipcode}</small></p></td>
                     </tr>
                     <tr>
+                      <td><p><span>Type:</span><small>{each.type}</small></p></td>
+                      <td><p><span>Garage:</span><small>{each.garage} garage(s)</small></p></td>
+                    </tr>
+                    <tr>
                       <td><p><span>Baths:</span><small>{each.bath.full} full bath(s) and {each.bath.half} bath(s)</small></p></td>
-                      <td><p><span>Beadrooms:</span><small>{each.bed} bedrooms</small></p></td>
+                      <td><p><span>Beadrooms:</span><small>{each.bed} bedroom(s)</small></p></td>
                     </tr>
                   </tbody>
                 </table>
